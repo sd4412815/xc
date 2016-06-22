@@ -1,0 +1,245 @@
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat.
+ *//*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+mark{/* color:#000; */color:#fff;/* background:#ff0; */ background:#ff3333;}
+body{font-family:"Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.428571429;color:#333;background-color:#fff}
+a{/* color:#428bca; */color:#222;text-decoration:none;}
+a:hover,a:focus{color:#ff9900;text-decoration:none;}
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+ /*  margin-right: auto;
+  margin-left: auto; */
+}
+nav>.container-fluid{padding-left:8.33%;padding-right:8.33%;} 
+.navbar{position:relative;z-index:1000;min-height:30px;/* margin-bottom:20px; */ margin-bottom:0px; border:1px solid transparent; }
+.navbar-default{/* background-color:#f8f8f8; */background-color:#f8981d;/* border-color:#e7e7e7; */}
+.navbar-default .navbar-brand{/* color:#777 */color:#fff;}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus{/* color:#5e5e5e; */color:#fff;background-color:red;/* background-color:transparent */}
+.navbar-default .navbar-text{/* color:#777 */color:#fff;}
+.navbar-default .navbar-nav>li>a{/* color:#777 */color:#fff;}
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus{/* color:#333;*/color:#fff;background-color:red; /* background-color:transparent; */}
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus{/* color:#555; */color:#fff;background-color:red;/* background-color:#e7e7e7 */ }
+
+.nav-pills > li {
+  float: left;
+}
+.nav-pills > li > a {
+   /* border-radius: 4px;  */
+  
+}
+.nav-pills > li + li {
+  margin-left: 2px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #f8981d;
+  /* background-color: #428bca; */
+  background-color: transparent;
+}
+
+.label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:bold;line-height:1;/* color:#fff; */color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}
+.label-warning{/* background-color:#f0ad4e; */background-color:#f2b90a;}
+.badge{display:inline-block;min-width:10px;padding:3px 7px;font-size:12px;font-weight:bold;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;/* background-color:#999; */background-color:#5cb85c;border-radius:10px}
+
+#head-nav ul li{
+	display:inline-block;
+    
+}
+#head-nav ul li a{
+	color:#000000;
+	text-decoration:none;
+	font-size:18px;
+	margin: 20px 0px 10px 15px;
+	display:block;	
+    padding:0.3em 0.3em;	
+	text-transform:uppercase;
+}	
+#head-nav ul li a:hover,#head-nav ul li.active a{
+	border-bottom:2px solid #f8981d;
+	color:#f8981d;
+}
+#z_table th,
+#z_table td {
+    border: 1px solid #900 !important;
+  }
+
+form .required span {
+color:red; }
+
+form .errorMessage {
+	display:inline;
+color:orange; }
+form .error input {
+background:#FEE; border-color:red; }
+form .success input {
+ border-color:green; }
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	
+	
+}
+#progressbar li {
+	list-style-type: none;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 14px;
+	width: 25%;
+	float: left;
+	position: relative;
+	text-align:center;
+	
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 16px;
+	color: #333;
+	background: #eee;
+	border-radius: 15px;
+	margin: 0 auto 5px auto;
+	
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 5px;
+	background: #eee;
+	position: absolute;
+	left: -50%;
+	top: 13px;
+    z-index: -2; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+	
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+ .sorter_container{
+margin: 0 0 5px 0;
+ text-align: left;
+}
+ .sorter_container li{
+ 	margin: 0 0 0 0;
+ }
+ 
+ .list-view .sorter li{
+ 	margin:0;
+ }
+ .sorter_container li a {
+display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid transparent;
+border-radius: 0px; 	
+background-color: #fafafa;
+color: #666;
+border-color: #ddd;
+border-bottom-color: #ddd;
+}
+
+#sValue{
+    font-size:30px;
+	padding:12px;
+	border-radius:25px;
+}
+
+.pager .selected{
+	color:yellow;
+}
+.pager .selected  a{
+color:#f8981d;
+background-color:#ddd;}
+
+.text-yellow{
+	color:#f39c12;
+}
+
+.select2-container .select2-choice{
+padding:0;
+height: 34px;
+line-height: 1.428571429;
+border-radius:0;
+display: block;
+width: 100%;
+padding: 6px 12px;
+font-size: 14px;
+color: #555;
+vertical-align: middle;
+	background-color:transparent;
+}
+.select2-container .select2-choice .select2-arrow{
+	border-left:0;
+	background-image:none;
+	background-color: transparent ;
+	color:black;
+	
+}
+
+.btn.btn-app1 {
+  position: relative;
+ /*  padding: 15px 5px; */
+  padding: 5px 5px;
+  /* margin: 0 0 10px 10px; */
+  margin: 0 3px 2px 1px;
+  /* min-width: 80px; */
+  min-width: 70px;
+ /*  height: 60px; */
+  height: 30px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-align: center;
+  color: #666;
+  border: 1px solid #f8981d;
+  background-color: #fafafa;
+  background:url(../img/btn.png);
+  font-size: 12px;
+}
+.btn.btn-app1 > .badge {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  font-size: 10px;
+  font-weight: 100;
+}
+

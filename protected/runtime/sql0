@@ -1,0 +1,622 @@
+_date_time >= :order_date_time_begin
+					AND oh_date_time_end <= :order_date_time_end)
+				OR (oh_date_time >= :order_date_time_begin
+					AND oh_date_time <= :order_date_time_end)
+				OR (oh_date_time_end >= :order_date_time_begin
+					AND oh_date_time_end <= :order_date_time_end))
+				AND oh_wash_shop_id=:wash_shop_id
+				AND	oh_state>0
+				AND oh_position = :position
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] OrderTemp.update()
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] OrderTemp.updateByPk()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_order_temp` SET `id`=:yp0, `ot_wash_shop_id`=:yp1, `ot_date_time`=:yp2, `ot_date_time_end`=:yp3, `ot_state`=:yp4, `ot_user_id`=:yp5, `ot_position`=:yp6, `ot_staff_id1`=:yp7, `ot_staff_id2`=:yp8, `ot_type`=:yp9, `ot_bias`=:yp10, `ot_value1`=:yp11, `ot_value2`=:yp12, `ot_value1_discount`=:yp13, `ot_value2_discount`=:yp14, `ot_car_type`=:yp15 WHERE `tb_order_temp`.`id`='20404'
+2015/02/09 16:44:56 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:44:56 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:44:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:45:10 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:45:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:45:21 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:45:21 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:45:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:45:36 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:45:36 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:45:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:45:55 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:45:56 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:45:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:46:49 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:46:49 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:46:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:46:54 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:46:54 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:46:54 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/09 16:47:20 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/09 16:47:20 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/09 16:47:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/10 10:41:50 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/10 10:41:50 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/10 10:41:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/10 10:41:58 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Score_History`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Score_History`
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] User.update()
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_User` SET `id`=:yp0, `u_tel`=:yp1, `u_name`=:yp2, `u_member_id`=:yp3, `u_pwd`=:yp4, `u_score`=:yp5, `u_join_date`=:yp6, `u_login_date`=:yp7, `u_type`=:yp8, `u_sex`=:yp9, `u_age`=:yp10, `u_state`=:yp11, `u_nick_name`=:yp12, `u_error_count`=:yp13, `u_car_brand`=:yp14, `u_car_type`=:yp15 WHERE `tb_User`.`id`='50'
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] ScoreHistory.insert()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_Score_History` (`sh_date_time`, `sh_order_history_id`, `sh_user_id`, `sh_score`, `sh_desc`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.update()
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.updateByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_Order_History` SET `id`=:yp0, `oh_no`=:yp1, `oh_wash_shop_id`=:yp2, `oh_state`=:yp3, `oh_user_ack`=:yp4, `oh_boss_ack`=:yp5, `oh_staff_ack`=:yp6, `oh_order_date_time`=:yp7, `oh_date_time`=:yp8, `oh_date_time_end`=:yp9, `oh_value`=:yp10, `oh_value_discount`=:yp11, `oh_score`=:yp12, `oh_pay_state`=:yp13, `oh_user_id`=:yp14, `oh_service_num`=:yp15, `oh_type`=:yp16, `oh_position`=:yp17, `oh_staff_id1`=:yp18, `oh_staff_id2`=:yp19, `oh_car_type`=:yp20, `oh_discount`=:yp21, `oh_pay_type`=:yp22, `oh_src`=:yp23 WHERE `tb_Order_History`.`id`='45'
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_order_comments`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_order_comments`
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderComments.insert()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_order_comments` (`oc_comment`, `oc_state`, `oc_order_id`, `oc_washshop_id`, `oc_comment_user_id`, `oc_comment_user_type`, `oc_datetime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+2015/02/10 10:41:58 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:41:58 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:41:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:41:59 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:41:59 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:41:59 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:41:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/10 10:42:28 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/10 10:42:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/10 10:42:38 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Score_History`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Score_History`
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] User.update()
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_User` SET `id`=:yp0, `u_tel`=:yp1, `u_name`=:yp2, `u_member_id`=:yp3, `u_pwd`=:yp4, `u_score`=:yp5, `u_join_date`=:yp6, `u_login_date`=:yp7, `u_type`=:yp8, `u_sex`=:yp9, `u_age`=:yp10, `u_state`=:yp11, `u_nick_name`=:yp12, `u_error_count`=:yp13, `u_car_brand`=:yp14, `u_car_type`=:yp15 WHERE `tb_User`.`id`='50'
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] ScoreHistory.insert()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_Score_History` (`sh_date_time`, `sh_order_history_id`, `sh_user_id`, `sh_score`, `sh_desc`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.update()
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.updateByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_Order_History` SET `id`=:yp0, `oh_no`=:yp1, `oh_wash_shop_id`=:yp2, `oh_state`=:yp3, `oh_user_ack`=:yp4, `oh_boss_ack`=:yp5, `oh_staff_ack`=:yp6, `oh_order_date_time`=:yp7, `oh_date_time`=:yp8, `oh_date_time_end`=:yp9, `oh_value`=:yp10, `oh_value_discount`=:yp11, `oh_score`=:yp12, `oh_pay_state`=:yp13, `oh_user_id`=:yp14, `oh_service_num`=:yp15, `oh_type`=:yp16, `oh_position`=:yp17, `oh_staff_id1`=:yp18, `oh_staff_id2`=:yp19, `oh_car_type`=:yp20, `oh_discount`=:yp21, `oh_pay_type`=:yp22, `oh_src`=:yp23 WHERE `tb_Order_History`.`id`='45'
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_order_comments`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_order_comments`
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderComments.insert()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_order_comments` (`oc_comment`, `oc_state`, `oc_order_id`, `oc_washshop_id`, `oc_comment_user_id`, `oc_comment_user_type`, `oc_datetime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+2015/02/10 10:42:38 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:38 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/10 10:42:55 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/10 10:42:55 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/10 10:43:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='44' LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Score_History`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Score_History`
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] User.update()
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_User` SET `id`=:yp0, `u_tel`=:yp1, `u_name`=:yp2, `u_member_id`=:yp3, `u_pwd`=:yp4, `u_score`=:yp5, `u_join_date`=:yp6, `u_login_date`=:yp7, `u_type`=:yp8, `u_sex`=:yp9, `u_age`=:yp10, `u_state`=:yp11, `u_nick_name`=:yp12, `u_error_count`=:yp13, `u_car_brand`=:yp14, `u_car_type`=:yp15 WHERE `tb_User`.`id`='50'
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] ScoreHistory.insert()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_Score_History` (`sh_date_time`, `sh_order_history_id`, `sh_user_id`, `sh_score`, `sh_desc`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.update()
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.updateByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_Order_History` SET `id`=:yp0, `oh_no`=:yp1, `oh_wash_shop_id`=:yp2, `oh_state`=:yp3, `oh_user_ack`=:yp4, `oh_boss_ack`=:yp5, `oh_staff_ack`=:yp6, `oh_order_date_time`=:yp7, `oh_date_time`=:yp8, `oh_date_time_end`=:yp9, `oh_value`=:yp10, `oh_value_discount`=:yp11, `oh_score`=:yp12, `oh_pay_state`=:yp13, `oh_user_id`=:yp14, `oh_service_num`=:yp15, `oh_type`=:yp16, `oh_position`=:yp17, `oh_staff_id1`=:yp18, `oh_staff_id2`=:yp19, `oh_car_type`=:yp20, `oh_discount`=:yp21, `oh_pay_type`=:yp22, `oh_src`=:yp23 WHERE `tb_Order_History`.`id`='44'
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_order_comments`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_order_comments`
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='44' LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderComments.insert()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_order_comments` (`oc_comment`, `oc_state`, `oc_order_id`, `oc_washshop_id`, `oc_comment_user_id`, `oc_comment_user_type`, `oc_datetime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+2015/02/10 10:43:01 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:01 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:01 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] Message.countByAttributes()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_message`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_message`
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_message` `t` WHERE `t`.`m_user_id`=:yp0 AND `t`.`m_status`=:yp1
+2015/02/10 10:43:18 [trace] [system.db.ar.CActiveRecord] Message.findAll()
+2015/02/10 10:43:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_message` `t` WHERE (m_user_id=:userId) AND (m_status=0) ORDER BY m_datetime DESC
+2015/02/10 10:43:23 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:43:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:43:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:43:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:43:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:43:23 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:43:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Score_History`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Score_History`
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_User` `t` WHERE `t`.`id`='50' LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] User.update()
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_User` SET `id`=:yp0, `u_tel`=:yp1, `u_name`=:yp2, `u_member_id`=:yp3, `u_pwd`=:yp4, `u_score`=:yp5, `u_join_date`=:yp6, `u_login_date`=:yp7, `u_type`=:yp8, `u_sex`=:yp9, `u_age`=:yp10, `u_state`=:yp11, `u_nick_name`=:yp12, `u_error_count`=:yp13, `u_car_brand`=:yp14, `u_car_type`=:yp15 WHERE `tb_User`.`id`='50'
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] ScoreHistory.insert()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_Score_History` (`sh_date_time`, `sh_order_history_id`, `sh_user_id`, `sh_score`, `sh_desc`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderHistory.update()
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderHistory.updateByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tb_Order_History` SET `id`=:yp0, `oh_no`=:yp1, `oh_wash_shop_id`=:yp2, `oh_state`=:yp3, `oh_user_ack`=:yp4, `oh_boss_ack`=:yp5, `oh_staff_ack`=:yp6, `oh_order_date_time`=:yp7, `oh_date_time`=:yp8, `oh_date_time_end`=:yp9, `oh_value`=:yp10, `oh_value_discount`=:yp11, `oh_score`=:yp12, `oh_pay_state`=:yp13, `oh_user_id`=:yp14, `oh_service_num`=:yp15, `oh_type`=:yp16, `oh_position`=:yp17, `oh_staff_id1`=:yp18, `oh_staff_id2`=:yp19, `oh_car_type`=:yp20, `oh_discount`=:yp21, `oh_pay_type`=:yp22, `oh_src`=:yp23 WHERE `tb_Order_History`.`id`='45'
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_order_comments`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_order_comments`
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderHistory.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE `t`.`id`='45' LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderComments.insert()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `tb_order_comments` (`oc_comment`, `oc_state`, `oc_order_id`, `oc_washshop_id`, `oc_comment_user_id`, `oc_comment_user_type`, `oc_datetime`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+2015/02/10 10:43:24 [trace] [system.db.CDbConnection] Opening DB connection
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Order_History`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Order_History`
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderHistory.count()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] OrderHistory.findAll()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Order_History` `t` WHERE oh_user_id=:user_id ORDER BY oh_date_time DESC LIMIT 8
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Service_Type`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Service_Type`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_Wash_Shop`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_Wash_Shop`
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] ServiceType.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Service_Type` `t` WHERE `t`.`id`=3 LIMIT 1
+2015/02/10 10:43:24 [trace] [system.db.ar.CActiveRecord] WashShop.findByPk()
+2015/02/10 10:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_Wash_Shop` `t` WHERE `t`.`id`='20' LIMIT 1
+2015/02/10 10:57order_temp`
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_order_temp` `t` WHERE (ot_state=1) AND (ot_date_time>:ctime)
+2015/02/12 09:13:18 [trace] [system.db.ar.CActiveRecord] OrderTemp.count()
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tb_order_temp` `t`
+2015/02/12 09:13:18 [trace] [system.db.ar.CActiveRecord] City.find()
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_City`
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_City`
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_City` `t` WHERE c_name LIKE :ycp0 LIMIT 1
+2015/02/12 09:13:18 [trace] [system.db.ar.CActiveRecord] City.findAll()
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_City` `t` ORDER BY  c_spell ASC
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tb_User`
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tb_User`
+2015/02/12 09:13:18 [trace] [system.db.ar.CActiveRecord] City.find()
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_City` `t` WHERE c_name LIKE :ycp1 LIMIT 1
+2015/02/12 09:13:18 [trace] [system.db.ar.CActiveRecord] City.findAll()
+2015/02/12 09:13:18 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tb_City` `t` ORDER BY  c_spell ASC
